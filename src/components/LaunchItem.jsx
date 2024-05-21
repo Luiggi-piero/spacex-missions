@@ -1,6 +1,7 @@
-import { Box, Button, Flex, Spacer, Tag, Text, Icon } from "@chakra-ui/react"
+import { Box, Flex, Spacer, Tag, Text, Icon, Button } from "@chakra-ui/react"
 import dayjs from "dayjs"
 import { CiCalendar } from "react-icons/ci"
+import { Link } from "react-router-dom"
 
 // eslint-disable-next-line react/prop-types
 export const LaunchItem = ({ launch }) => {
@@ -40,9 +41,16 @@ export const LaunchItem = ({ launch }) => {
                 </Text>
             </Flex>
 
-            <Button mt={2} colorScheme="purple">
-                More details
-            </Button>
+            <Link
+                // eslint-disable-next-line react/prop-types
+                to={`/launch/${launch.flight_number}`}
+            >
+                <Button
+                    mt={2}
+                    colorScheme="purple">
+                    More details
+                </Button>
+            </Link>
         </Box>
     )
 }

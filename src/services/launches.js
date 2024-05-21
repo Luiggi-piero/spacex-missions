@@ -1,4 +1,6 @@
 const API_URL = 'https://api.spacexdata.com/v3';
+// https://api.spacexdata.com/v3/launches
+// https://api.spacexdata.com/v3/launches/33
 
 export async function getAllLaunches() {
     try {
